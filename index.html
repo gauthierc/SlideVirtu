@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Virtualisation • Gauthier C. @ Mardi virtu</title>
+
+		<meta name="description" content="Une session à Mardi virtu">
+		<meta name="author" content="Gauthier C.">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme-basis">
+		<link rel="stylesheet" href="css/theme/pw14.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/tomorrow.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+    	</head>
+
+	<body id="prioFix">
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Virtualisation</h1>
+					<h3>Explication, démystification</h3>
+					<p>
+						<small>Une présentation de <a href="http://twitter.com/CattGr/">Gauthier C.</a> </small>
+					</p>
+				</section>
+
+        <section id="abstract">
+          <h2>En 30 minutes</h2>
+
+          <ol>
+              <li> Histoire de la virtualisation</li>
+              <li> Concepts et solutions de virtualisation </li>
+              <li> Le Cloud Computing</li>
+              <ul><li>Les concepts</li><li>Solutions libres</li></ul>
+          </ol>
+        </section>
+
+
+        <!-- ########################################################################################## -->
+				<section data-state="theme-color-mint-beige">
+					<section id="histoire">
+						<h1>Histoires de la virtualisation</h1>
+					</section>
+
+          <section id="histoire-1">
+             <h2>Une vieille histoire</h2>
+             <ul>
+                 <li>Mis au point dans les années 60 pour les mainframes. </li>
+                 <li>Le partitionnement constituait un moyen naturel de tirer pleinement parti de l’investissement matériel.</li>
+                 <li>Abandonnée au cours des années 1980 et 1990.</li>
+            </ul>
+         </section>
+
+          <section id="histoire-2">
+             <h2>Retour sur x86</h2>
+             <ul>
+                 <li>Besoin de consolidation des serveurs x86 (utilisation 10 à 15%)</li>
+                 <li>Coût de migration, manque de fléxibilité</li>
+                 <li>x86 non prévu pour la virtualisation</li>
+             </ul>
+          </section>
+				</section> <!-- #histoire -->
+
+        <!-- ########################################################################################## -->
+				<section data-state="theme-color-silver-green">
+					<section id="concepts">
+						<h1>Concepts et solutions de virtualisation</h1>
+					</section>
+
+          <section id="concept-1">
+             <h2>Hyperviseur de type 2</h2>
+             <img src="assets/Diagramme_ArchiEmulateur.png" class="schema">
+          </section>
+
+          <section id="concept-1b">
+             <h2>Hyperviseur de type 2</h2>
+             <ul>
+                 <li>logiciels Microsoft (Microsoft VirtualPC, Microsoft Virtual Server)</li>
+                 <li>logiciels Parallels (Parallels Desktop, Parallels Server)</li>
+                 <li>logiciel Oracle VM VirtualBox (libre)</li>
+                 <li>logiciels VMware (VMware Fusion, VMware Player, VMware Server, VMware Workstation)</li>
+                 <li>logiciels libres (QEMU : émulateur de plateformes x86, PPC, Sparc, et bochs : émulateur de plateforme x86).</li>
+             </ul>
+         </section>
+
+          <section id="concept-2">
+             <h2>Hyperviseur de type 1</h2>
+             <img src="assets/Diagramme_ArchiHyperviseur.png" class="schema">
+          </section>
+
+          <section id="concept-2b">
+             <h2>Hyperviseur de type 1</h2>
+             <ul>
+                 <li>Citrix Xen Server (libre)</li>
+                 <li>VMware vSphere - VMware ESXi (gratuit)</li>
+                 <li>Microsoft Hyper-V Server</li>
+                 <li>Parallels Server Bare Metal</li>
+                 <li>KVM (libre)</li>
+                 <li>Oracle VM (gratuit), </li>
+                 <li>Lime Access</li>
+             </ul>
+          </section>
+
+          <section id="concept-3">
+             <h2>Isolateur/conteneur</h2>
+             <img src="assets/Diagramme_ArchiIsolateur.png" class="schema">
+          </section>
+
+          <section id="concept-3b">
+             <h2>Isolateur/conteneur</h2>
+             <ul>
+                 <li>Linux-VServer (isolation des processus en espace utilisateur)</li>
+                 <li>chroot (isolation changement de racine) </li>
+                 <li>BSD Jail (isolation en espace utilisateur) </li>
+                 <li>OpenVZ : libre (partitionnement au niveau noyau sous Linux)</li>
+                 <li>LXC : libre, (usage des Cgroups du noyau Linux)</li>
+                 <li>Docker : libre, (usage des Cgroups du noyau Linux)</li>
+             </ul>
+         </section>
+				</section> <!-- #concepts -->
+
+
+        <!-- ########################################################################################## -->
+
+				<section data-state="theme-color-mint-beige">
+					<section id="Cloud">
+						<h1>Le Cloud Computing</h1>
+					</section>
+
+          <section id="cloud-1">
+             <h2>Les concepts</h2>
+             <img src="assets/Cloud_Computing.png" class="schema">
+         </section>
+
+          <section id="cloud-2">
+             <h2>Les solutions libres</h2>
+             <ul>
+                 <li>.</li>
+             </ul>
+          </section>
+				</section> <!-- #histoire -->
+
+
+        <!-- ########################################################################################## -->
+
+
+
+			<section>
+					<h1>Questions ?</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+        width: 980,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
