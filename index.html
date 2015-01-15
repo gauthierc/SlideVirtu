@@ -151,7 +151,7 @@
 
         <!-- ########################################################################################## -->
 
-				<section data-state="theme-color-mint-beige">
+				<section data-state="theme-color-silver-green">
 					<section id="Cloud">
 						<h1>Le Cloud Computing</h1>
 					</section>
@@ -161,10 +161,58 @@
              <img src="assets/Cloud_Computing.png" class="schema">
          </section>
 
+          <section id="cloud-1b">
+             <h2>Les concepts</h2>
+             <img src="assets/Cloud-value.png" class="schema">
+         </section>
+
           <section id="cloud-2">
-             <h2>Les solutions libres</h2>
+             <h2>Les enjeux</h2>
+	<h3>Avantages</h3>
              <ul>
-                 <li>.</li>
+                 <li>Mutualisation</li>
+                 <li>Achat &rarr; Location</li>
+                 <li>Flexibilité</li>
+             </ul>
+	<h3>Inconvénients</h3>
+             <ul>
+                 <li>Perte du contrôle de nos données (utilisation et localisation)</li>
+                 <li>Dépendance à la qualité du réseau</li>
+                 <li>Risque d'enfermement propriétaire</li>
+                 <li>Bilan énergétique global</li>
+             </ul>
+         </section>
+
+          <section id="iaas">
+             <h2>Les solutions IaaS libres</h2>
+		<p></p>
+             <ul>
+                 <li>OpenStack</li>
+                 <li>Apache CloudStack</li>
+                 <li>Eucalyptus</li>
+                 <li>OpenNebula</li>
+             </ul>
+          </section>
+	
+          <section id="paas">
+             <h2>Les solutions PaaS libres</h2>
+		<p>Des solutions basées sur des architectures IaaS pour automatiser le déployement d'applications.</p>
+             <ul>
+                 <li>OpenShift (RedHat)</li>
+                 <li>Cloud Foundry (Linux Fondation)</li>
+                 <li>Cloudify</li>
+                 <li>Apache Stratos</li>
+                 <li>Deis (basé sur CoreOS Docker)</li>
+             </ul>
+          </section>
+          <section id="saas">
+             <h2>Les solutions SaaS</h2>
+		<p>De nombreuses applications &lsaquo;&lsaquo;as a Service&rsaquo;&rsaquo; ne sont pas des applications Clouds; ce sont de simple applications &lsaquo;&lsaquo;classiques&rsaquo;&rsaquo; qui s'appuient sur une infrastructure traditionnelle de serveurs web.</p>
+             <ul>
+                 <li>Un Cloud est un espace virtuel</li>
+                 <li>Les données sont fragmentées</li>
+                 <li>Les fragments de données sont dupliqués et répartis sur plusieurs supports physiques</li>
+                 <li></li>
              </ul>
           </section>
 				</section> <!-- #histoire -->
@@ -180,6 +228,12 @@
 			</div>
 		</div>
 
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+
+
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -194,6 +248,7 @@
 				center: true,
 
         width: 980,
+        height: 800,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
