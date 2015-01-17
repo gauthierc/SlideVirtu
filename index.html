@@ -136,13 +136,17 @@
 
           <section id="conteneur-solut">
              <h2>Isolateur/conteneur</h2>
+             <h3>Isolation simple</h3>
              <ul>
-                 <li>Linux-VServer (isolation des processus en espace utilisateur)</li>
                  <li>chroot (isolation changement de racine) </li>
                  <li>BSD Jail (isolation en espace utilisateur) </li>
-                 <li>OpenVZ : libre (partitionnement au niveau noyau sous Linux)</li>
-                 <li>LXC : libre, (usage des Cgroups du noyau Linux)</li>
-                 <li>Docker : libre, (usage des Cgroups du noyau Linux)</li>
+             </ul>
+             <h3>Isolation évoluée</h3>
+             <ul>
+                 <li>Linux-VServer (isolation des processus en espace utilisateur)</li>
+                 <li>OpenVZ (partitionnement au niveau noyau sous Linux)</li>
+                 <li>LXC (usage des Cgroups du noyau Linux)</li>
+                 <li>Docker (usage des Cgroups du noyau Linux)</li>
              </ul>
          </section>
 
@@ -150,7 +154,7 @@
              <h2>Outils d'administration</h2>
              <ul>
                  <li>Vmware Vsphere</li>
-                 <li>OVirt / RHEV</li>
+                 <li>oVirt / RHEV</li>
                  <li>Proxmox</li>
              </ul>
           </section>
@@ -188,9 +192,9 @@ sur une ou plusieurs machines qui n’ont pas d’attribution fonctionnelle part
              <h2>Les enjeux</h2>
 	<h3>Avantages</h3>
              <ul>
-                 <li>Mutualisation</li>
-                 <li>Achat &rarr; Location</li>
-                 <li>Flexibilité</li>
+                 <li>Mutualisation des ressources</li>
+                 <li>Achat (Serveurs, licenses, ...) &rarr; Location</li>
+                 <li>Flexibilité (ressources à la demande)</li>
              </ul>
 	<h3>Inconvénients</h3>
              <ul>
